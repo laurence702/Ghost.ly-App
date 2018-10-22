@@ -1,0 +1,126 @@
+/* #fc3161  #2d2d2d
+ #0f4a8c */
+body{
+	margin:0px; padding:0px; font-family:Serif; display:block; height:100%; width:100%; position:absolute; font-size:100%; z-index:1;
+}
+* a{ outline:none; }
+* a:hover, * a:active{ outline:none; }
+
+
+main{
+	display:flex; flex-flow:column nowrap;
+	min-height:100%; width:100%; align-items:flex-start; border-bottom:2px solid #fc3161; color:#fff; background:#2d2d2d;
+}
+
+main .bg{
+	display:block; position:absolute; width:100%; height:100%; z-index:1; opacity:0.28;
+	background: url("../Images/blockchains-earth.jpg") no-repeat right fixed; background-size:cover;
+}
+main > *:not(.bg){ z-index:2; position:static; }
+
+main nav{
+	display:flex; width:100%; height:2.5em; justify-content:flex-end; font-size:0.85em; margin:0px; padding:0.3em 0px; text-transform:uppercase;
+}
+main nav > *{
+	margin:auto 0.7em; padding:0.3em; border:2px solid #fc3161; border-color:#fc3161 transparent; color:#fff; text-decoration:none;
+}
+
+main .subtitle{
+	display:flex; flex-flow:column nowrap; align-items:flex-start; width:100%; flex-grow:1;
+}
+main .subtitle > *{
+	display:block; width:100%; text-align:center; margin:2em 0px 0px; font-family:Monospace; 
+}
+.subtitle h3{ text-transform:uppercase; }
+main .subtitle div{
+	font-family:Arial; font-weight:normal; margin:auto; display:block; box-sizing:border-box; padding-left:2em; text-align:left;
+}
+main .subtitle div *{ display:block; }
+
+
+
+.review-container {
+	display:block; font-family:Arial; margin:5em 0px 0px;
+}
+.review-container h2{
+	display:block; width:100%; text-align:center; text-transform:capitalize; font-weight:200;
+}
+
+.review-items{
+	display:flex; width:90%; flex-flow:column nowrap; position:relative; left:5%; align-items:center;
+}
+.review-item{
+	width:250px; height:auto; margin:30px 0px; display:flex; flex-flow:column nowrap; box-sizing:border-box; border:2px solid #aaa; overflow:hidden; padding:0px;
+}
+
+.reviewer-image {
+	width:100%; height:200px; display:flex;
+}
+.reviewer-image i{
+	display:block; width:180px; height:180px; border-radius:50%; margin:auto;
+ 	background: url("../Images/cartoon-icon.jpg"); background-size:100% 100%; background-repeat:no-repeat;
+}
+
+.review-text{
+	display:block; width:calc(100% - 1em); left:0.5em; padding:1em 0px; position:relative; font-family:Arial; font-size:1.2em;
+}
+
+
+footer{
+	display:flex; position:relative; flex-flow:column nowrap; width:100%; background:#2d2d2d; color:#fff; padding:0.5em 10px; box-sizing:border-box; font-size:0.9em; margin:1em 0px 0px 0px;
+}
+footer i{ font-style:normal; }
+footer nav{
+	display:flex; flex-flow:row wrap; margin-bottom:1.5em;
+}
+footer nav > *{
+	display:inline-block; width:50%; text-align:center; padding:0.2em 0px; color:#fff; text-decoration:none;
+}
+footer > *:not(nav){
+	text-align:center; width:100%; padding:0.5em 0px; 
+}
+.footer .icons{
+	font-size:1.2em; display:flex; justify-content:space-around;
+}
+footer .icons > *{ margin:0px 1.5em; }
+footer .icons > *:first-child{
+	margin-left:auto;
+}
+footer .icons > *:last-child{
+	margin-right:auto;
+}
+footer .copyright{ font-family:Arial; }
+
+
+
+
+@media only screen and (min-width: 400px){
+	.review-item{ width:330px; }
+	
+	footer nav > *{ width:25%; }
+}
+
+
+@media only screen and (min-width: 510px){
+	body{ font-size:125%; }
+}
+
+@media only screen and (min-width: 800px){
+	body { font-size:150%; }
+	
+	
+	main .subtitle div{
+		display:block; width:100%; padding-left:15%; font-size:1.2em;
+	}
+	
+	
+	.review-items {
+		height:auto; flex-flow:row nowrap; align-items:flex-start; justify-content:space-between; padding-bottom:2em;
+	}
+	.review-item {
+		max-width:30%; height:auto; margin:0px; border:none;
+	}
+	.review-text{
+		font-size:1.1em; width:84%; left:8%; text-align:justify;
+	}
+}
