@@ -26,4 +26,7 @@ class PagesController extends Controller
     $title = 'Contact-Us';
       return view('pages.contact')->with('title',$title);
     }
+    public function premium(){
+      return view('pages.premium');
+    }
 }

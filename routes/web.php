@@ -19,6 +19,10 @@ Route::get('/', 'PagesController@index');
 Route::get('/home', 'PagesController@index');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/courses', 'PagesController@courses');
-
+Route::get('/premium',"PagesController@premium");
 Route::get('/about', 'PagesController@about');
 Route::resource('posts','PostsController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
